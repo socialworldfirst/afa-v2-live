@@ -1,26 +1,26 @@
 {
-  "updated_sgt": "2026-07-03 19:19 SGT",
+  "updated_sgt": "2026-07-04 06:55 SGT",
   "flight_start": "2026-07-02",
   "budget_daily": 3000,
-  "totals": {"spend": 1936.81, "impr": 579196, "clicks": 2857, "reg": 2},
+  "totals": {"spend": 3015.94, "impr": 917900, "clicks": 4766, "reg": 4},
   "regions": [
-    {"code": "MY", "name": "Malaysia", "budget": 1800, "spend": 1288.62, "impr": 425060, "ctr": 0.84, "clicks": 1955, "reach": 203015, "freq": 2.09, "reg": 2,
+    {"code": "MY", "name": "Malaysia", "budget": 1800, "spend": 1948.36, "impr": 669623, "ctr": 0.87, "clicks": 3242, "reach": 275973, "freq": 2.43, "reg": 3,
       "cells": [
-        {"c": "Ad spend", "spend": 543.70, "impr": 167018, "ctr": 0.80, "clicks": 745, "cpc": 0.73, "cpm": 3.26, "st": "learning"},
-        {"c": "Business spend", "spend": 744.92, "impr": 258042, "ctr": 0.86, "clicks": 1210, "cpc": 0.62, "cpm": 2.89, "st": "learning"}
+        {"c": "Ad spend", "spend": 898.78, "impr": 272988, "ctr": 0.87, "clicks": 1324, "cpc": 0.68, "cpm": 3.29, "st": "learning"},
+        {"c": "Business spend", "spend": 1054.29, "impr": 397828, "ctr": 0.87, "clicks": 1929, "cpc": 0.55, "cpm": 2.65, "st": "learning"}
       ]},
-    {"code": "SG", "name": "Singapore", "budget": 900, "spend": 439.91, "impr": 43490, "ctr": 0.99, "clicks": 229, "reach": 26840, "freq": 1.62, "reg": 0,
+    {"code": "SG", "name": "Singapore", "budget": 900, "spend": 746.50, "impr": 74173, "ctr": 1.03, "clicks": 406, "reach": 40644, "freq": 1.82, "reg": 0,
       "cells": [
-        {"c": "Ad spend", "spend": 225.72, "impr": 24407, "ctr": 1.02, "clicks": 138, "cpc": 1.64, "cpm": 9.25, "st": "learning"},
-        {"c": "Business spend", "spend": 214.19, "impr": 19083, "ctr": 0.95, "clicks": 91, "cpc": 2.35, "cpm": 11.22, "st": "learning"}
+        {"c": "Ad spend", "spend": 394.61, "impr": 43673, "ctr": 1.04, "clicks": 245, "cpc": 1.61, "cpm": 9.04, "st": "learning"},
+        {"c": "Business spend", "spend": 358.44, "impr": 30965, "ctr": 1.03, "clicks": 162, "cpc": 2.21, "cpm": 11.58, "st": "learning"}
       ]},
-    {"code": "ID", "name": "Indonesia", "budget": 300, "spend": 208.28, "impr": 110646, "ctr": 1.16, "clicks": 673, "reach": 61526, "freq": 1.80, "reg": 0,
+    {"code": "ID", "name": "Indonesia", "budget": 300, "spend": 321.08, "impr": 174104, "ctr": 1.23, "clicks": 1118, "reach": 91819, "freq": 1.90, "reg": 1,
       "cells": [
-        {"c": "Ad spend", "spend": 87.35, "impr": 42383, "ctr": 1.10, "clicks": 265, "cpc": 0.33, "cpm": 2.06, "st": "learning"},
-        {"c": "Business spend", "spend": 120.93, "impr": 68263, "ctr": 1.19, "clicks": 408, "cpc": 0.30, "cpm": 1.77, "st": "learning"}
+        {"c": "Ad spend", "spend": 150.38, "impr": 72086, "ctr": 1.30, "clicks": 519, "cpc": 0.29, "cpm": 2.09, "st": "learning"},
+        {"c": "Business spend", "spend": 172.08, "impr": 102311, "ctr": 1.20, "clicks": 609, "cpc": 0.28, "cpm": 1.68, "st": "learning"}
       ]},
     {"code": "SG_note", "skip": true}
   ],
-  "pixel": {"start": 7998, "submit": 2151, "complete": 3101, "l3": 2623, "note": "account-wide, ALL sources (organic + backend + old campaign + Zyla), NOT v2-attributed. Context for whether registrations are flowing at all."},
-  "kill_note": "ID kill-rule: if no Registration-submits attributed by ~US$500 combined spend, pause ID."
+  "pixel": {"start": 6938, "submit": 1837, "complete": 2632, "l3": 2182, "note": "account-wide, ALL sources (organic + backend + old campaign + Zyla), NOT v2-attributed. Context for whether registrations are flowing at all."},
+  "kill_note": "ID kill-rule: if no Registration-submits attributed by ~US$500 combined spend, pause ID. (ID now at US$321, first completed reg landed.)"
 }
