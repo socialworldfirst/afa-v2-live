@@ -1,0 +1,26 @@
+{
+  "updated_sgt": "2026-07-03 17:10 SGT",
+  "flight_start": "2026-07-02",
+  "budget_daily": 3000,
+  "totals": {"spend": 1302.72, "impr": 337431, "clicks": 1625, "reg": 0},
+  "regions": [
+    {"code": "MY", "name": "Malaysia", "budget": 1800, "spend": 751.03, "impr": 229350, "ctr": 0.87, "clicks": 1008, "reach": 122690, "freq": 1.87, "reg": 0,
+      "cells": [
+        {"c": "Ad spend", "spend": 210.22, "impr": 63238, "ctr": 0.79, "clicks": 269, "cpc": 0.78, "cpm": 3.32, "st": "learning"},
+        {"c": "Business spend", "spend": 509.77, "impr": 154907, "ctr": 0.91, "clicks": 717, "cpc": 0.71, "cpm": 3.29, "st": "learning"}
+      ]},
+    {"code": "SG", "name": "Singapore", "budget": 900, "spend": 431.26, "impr": 43058, "ctr": 0.98, "clicks": 226, "reach": 26714, "freq": 1.61, "reg": 0,
+      "cells": [
+        {"c": "Ad spend", "spend": 220.52, "impr": 24137, "ctr": 1.02, "clicks": 136, "cpc": 1.62, "cpm": 9.14, "st": "in review"},
+        {"c": "Business spend", "spend": 210.17, "impr": 18870, "ctr": 0.94, "clicks": 90, "cpc": 2.34, "cpm": 11.14, "st": "in review"}
+      ]},
+    {"code": "ID", "name": "Indonesia", "budget": 300, "spend": 120.43, "impr": 65023, "ctr": 1.15, "clicks": 391, "reach": 39131, "freq": 1.66, "reg": 0,
+      "cells": [
+        {"c": "Ad spend", "spend": 31.47, "impr": 14372, "ctr": 0.99, "clicks": 83, "cpc": 0.38, "cpm": 2.19, "st": "learning"},
+        {"c": "Business spend", "spend": 83.66, "impr": 47726, "ctr": 1.19, "clicks": 302, "cpc": 0.28, "cpm": 1.75, "st": "learning"}
+      ]},
+    {"code": "SG_note", "skip": true}
+  ],
+  "pixel": {"start": 6810, "submit": 1867, "complete": 2671, "l3": 2288, "note": "account-wide, ALL sources (organic + backend + old campaign + Zyla), NOT v2-attributed. Context for whether registrations are flowing at all."},
+  "kill_note": "ID kill-rule: if no Registration-submits attributed by ~US$500 combined spend, pause ID."
+}
