@@ -57,7 +57,7 @@ if A:
         f'<td class="l mutc">{r["verdict"]}</td></tr>'
         for r in A["rows"])
     attrib_html = f"""
-  <h4>Attributed results &mdash; what the ads actually caused</h4>
+  <h4>Attributed results &mdash; what the ads actually caused &middot; since the 6 Jul flip</h4>
   <section class="region">
     <div class="rkpi" style="grid-template-columns:repeat(4,1fr);margin-bottom:16px">
       <div><b class="g">{b['sub']}</b><span>submits, live cells since Jul 6</span></div>
@@ -117,7 +117,7 @@ CONTENT = f"""<style>
 
   {attrib_html}
 
-  <h4>Registration events &mdash; pixel pulse (four independent counters, not a funnel)</h4>
+  <h4>Registration events &mdash; pixel pulse &middot; {px.get('window', 'last 48h')}</h4>
   <div class="funnel">{funnel}</div>
   <div class="note" style="margin-top:8px">{px['note']}</div>
 
