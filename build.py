@@ -45,6 +45,30 @@ regions = [r for r in D["regions"] if not r.get("skip")]
 t = D["totals"]
 avg_cpc = t["spend"] / t["clicks"] if t["clicks"] else 0
 px = D["pixel"]
+
+A = D.get("attrib")
+attrib_html = ""
+if A:
+    b = A["blended"]
+    delta = (1 - b["cps"] / b["old_cps"]) * 100 if b["old_cps"] else 0
+    arows = "".join(
+        f'<tr><td class="l">{r["m"]}</td><td>{usd(r["spend"])}</td><td><b class="g">{r["sub"]}</b></td>'
+        f'<td>US${r["cps"]:.2f}</td><td class="mutc">US${r["old_cps"]:.2f}</td>'
+        f'<td class="l mutc">{r["verdict"]}</td></tr>'
+        for r in A["rows"])
+    attrib_html = f"""
+  <h4>Attributed results &mdash; what the ads actually caused</h4>
+  <section class="region">
+    <div class="rkpi" style="grid-template-columns:repeat(4,1fr);margin-bottom:16px">
+      <div><b class="g">{b['sub']}</b><span>submits, live cells since Jul 6</span></div>
+      <div><b>US${b['cps']:.2f}</b><span>cost / submit</span></div>
+      <div><b class="mut">US${b['old_cps']:.2f}</b><span>old regime baseline</span></div>
+      <div><b class="{'g' if delta > 0 else 'mut'}">{delta:+.0f}%</b><span>vs baseline</span></div>
+    </div>
+    <table><thead><tr><th class="l">Market</th><th>Spend</th><th>Submits</th><th>Cost/submit</th><th>Old baseline</th><th class="l">Read</th></tr></thead>
+    <tbody>{arows}</tbody></table>
+    <div class="note" style="margin:14px 0 0">{A['note']}</div>
+  </section>"""
 fmax = max(px["start"], px["submit"], px["complete"], px["l3"], 1)
 funnel = "".join(
     f'<div class="fl">{lab}</div><div class="fbar"><div class="ff" style="width:{v/fmax*100:.0f}%">{num(v)}</div></div>'
@@ -62,7 +86,7 @@ CONTENT = f"""<style>
   .k h3{{margin:0 0 4px;font-size:10.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.4px;font-weight:600}}
   .k .big{{font-size:22px;font-weight:680;letter-spacing:-.4px}} .k .big small{{font-size:11px;color:var(--mut);font-weight:500}}
   .note{{background:#15171d;border:1px solid var(--line);border-radius:10px;padding:12px 14px;color:var(--mut);font-size:12px;margin:16px 0}}
-  b.g{{color:var(--good)}} b.mut{{color:var(--mut)}} .ink{{color:var(--ink)}}
+  b.g{{color:var(--good)}} b.mut{{color:var(--mut)}} .ink{{color:var(--ink)}} .mutc{{color:var(--mut)}}
   h4{{font-size:13px;margin:26px 0 10px;border-left:3px solid var(--blue);padding-left:9px}}
   .funnel{{display:grid;grid-template-columns:150px 1fr;gap:6px 12px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}}
   .fl{{color:var(--mut);font-size:12px;text-align:right}} .fbar{{background:#1c2129;border-radius:6px;height:26px;overflow:hidden}}
@@ -90,6 +114,8 @@ CONTENT = f"""<style>
     <div class="k"><h3>Cells live</h3><div class="big">6<small>/6</small></div></div>
   </div>
   <div class="note"><b class="ink">How to read this:</b> completions fire only after internal approval (days later), so <b class="ink">0 completed is expected this early</b>, not a failure. Judge daily on <b class="ink">Registration-submit</b> (in Ads Manager custom columns), quality on L3. CTR near 1% and CPC of US$0.30&ndash;2.30 are by design (optimizing to registrations, not cheap clicks) &mdash; v1 bought clicks at US$0.05 and converted almost nobody.</div>
+
+  {attrib_html}
 
   <h4>Registration funnel &mdash; pixel pulse</h4>
   <div class="funnel">{funnel}</div>

@@ -1,26 +1,34 @@
 {
-  "updated_sgt": "2026-07-04 06:55 SGT",
+  "updated_sgt": "2026-07-07 09:47 SGT",
   "flight_start": "2026-07-02",
   "budget_daily": 3000,
-  "totals": {"spend": 3015.94, "impr": 917900, "clicks": 4766, "reg": 4},
+  "totals": {"spend": 10912.64, "impr": 2656133, "clicks": 14321, "reg": 9},
+  "attrib": {
+    "note": "Attributed Registration-submit, read from the live RegSubmit ad sets (their optimization event, 7-day click). Old-regime baseline = the 4 days before the Jul 6 flip. Completions lag days behind internal approval; 9 attributed completions have landed so far, all on the old cells.",
+    "blended": {"spend": 2921.27, "sub": 22, "cps": 132.79, "old_cps": 137.09},
+    "rows": [
+      {"m": "Malaysia", "spend": 1781.54, "sub": 10, "cps": 178.15, "old_cps": 324.73, "verdict": "45% cheaper, the flip's biggest win"},
+      {"m": "Indonesia", "spend": 348.31, "sub": 9, "cps": 38.70, "old_cps": 24.70, "verdict": "still the cheapest by far"},
+      {"m": "Singapore", "spend": 791.42, "sub": 3, "cps": 263.81, "old_cps": 248.83, "verdict": "flat so far, too early to call"}
+    ]
+  },
   "regions": [
-    {"code": "MY", "name": "Malaysia", "budget": 1800, "spend": 1948.36, "impr": 669623, "ctr": 0.87, "clicks": 3242, "reach": 275973, "freq": 2.43, "reg": 3,
+    {"code": "MY", "name": "Malaysia", "budget": 1800, "spend": 6577.28, "impr": 1854837, "ctr": 0.96, "clicks": 9215, "reach": 553859, "freq": 3.35, "reg": 8,
       "cells": [
-        {"c": "Ad spend", "spend": 898.78, "impr": 272988, "ctr": 0.87, "clicks": 1324, "cpc": 0.68, "cpm": 3.29, "st": "learning"},
-        {"c": "Business spend", "spend": 1054.29, "impr": 397828, "ctr": 0.87, "clicks": 1929, "cpc": 0.55, "cpm": 2.65, "st": "learning"}
+        {"c": "Ad spend", "spend": 879.21, "impr": 206840, "ctr": 0.82, "clicks": 937, "cpc": 0.94, "cpm": 4.25, "st": "learning"},
+        {"c": "Business spend", "spend": 902.33, "impr": 191983, "ctr": 0.70, "clicks": 739, "cpc": 1.22, "cpm": 4.70, "st": "learning"}
       ]},
-    {"code": "SG", "name": "Singapore", "budget": 900, "spend": 746.50, "impr": 74173, "ctr": 1.03, "clicks": 406, "reach": 40644, "freq": 1.82, "reg": 0,
+    {"code": "SG", "name": "Singapore", "budget": 900, "spend": 3197.75, "impr": 281359, "ctr": 1.08, "clicks": 1435, "reach": 109975, "freq": 2.56, "reg": 0,
       "cells": [
-        {"c": "Ad spend", "spend": 394.61, "impr": 43673, "ctr": 1.04, "clicks": 245, "cpc": 1.61, "cpm": 9.04, "st": "learning"},
-        {"c": "Business spend", "spend": 358.44, "impr": 30965, "ctr": 1.03, "clicks": 162, "cpc": 2.21, "cpm": 11.58, "st": "learning"}
+        {"c": "Ad spend", "spend": 379.96, "impr": 34864, "ctr": 0.98, "clicks": 171, "cpc": 2.22, "cpm": 10.90, "st": "learning"},
+        {"c": "Business spend", "spend": 411.46, "impr": 26796, "ctr": 0.91, "clicks": 124, "cpc": 3.32, "cpm": 15.36, "st": "learning"}
       ]},
-    {"code": "ID", "name": "Indonesia", "budget": 300, "spend": 321.08, "impr": 174104, "ctr": 1.23, "clicks": 1118, "reach": 91819, "freq": 1.90, "reg": 1,
+    {"code": "ID", "name": "Indonesia", "budget": 300, "spend": 1137.61, "impr": 519937, "ctr": 1.54, "clicks": 3671, "reach": 219027, "freq": 2.37, "reg": 1,
       "cells": [
-        {"c": "Ad spend", "spend": 150.38, "impr": 72086, "ctr": 1.30, "clicks": 519, "cpc": 0.29, "cpm": 2.09, "st": "learning"},
-        {"c": "Business spend", "spend": 172.08, "impr": 102311, "ctr": 1.20, "clicks": 609, "cpc": 0.28, "cpm": 1.68, "st": "learning"}
-      ]},
-    {"code": "SG_note", "skip": true}
+        {"c": "Ad spend", "spend": 181.45, "impr": 80900, "ctr": 0.99, "clicks": 382, "cpc": 0.48, "cpm": 2.24, "st": "learning"},
+        {"c": "Business spend", "spend": 166.86, "impr": 64397, "ctr": 1.05, "clicks": 310, "cpc": 0.54, "cpm": 2.59, "st": "learning"}
+      ]}
   ],
-  "pixel": {"start": 6938, "submit": 1837, "complete": 2632, "l3": 2182, "note": "account-wide, ALL sources (organic + backend + old campaign + Zyla), NOT v2-attributed. Context for whether registrations are flowing at all."},
-  "kill_note": "ID kill-rule: if no Registration-submits attributed by ~US$500 combined spend, pause ID. (ID now at US$321, first completed reg landed.)"
+  "pixel": {"start": 6757, "submit": 1823, "complete": 2099, "l3": 1898, "note": "Last 2 days, account-wide, ALL sources (organic + backend + other campaigns), NOT v2-attributed. Context for whether registrations are flowing at all. Monday saw an approval wave: completes surged as the weekend queue cleared."},
+  "kill_note": "Jul 6 flip: all 3 markets rebuilt onto Registration-submit optimization (old CompleteReg cells paused, history kept in region totals; cells tables below = the live RegSubmit cells only, running since Jul 6). ID lifetime spend cap US$1,500 nearly reached (US$1,136 spent), ID self-stops on cap unless raised."
 }
