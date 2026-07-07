@@ -29,6 +29,6 @@
         {"c": "Business spend", "spend": 166.86, "impr": 64397, "ctr": 1.05, "clicks": 310, "cpc": 0.54, "cpm": 2.59, "st": "learning"}
       ]}
   ],
-  "pixel": {"start": 6757, "submit": 1823, "complete": 2099, "l3": 1898, "note": "Last 2 days, account-wide, ALL sources (organic + backend + other campaigns), NOT v2-attributed. Context for whether registrations are flowing at all. Monday saw an approval wave: completes surged as the weekend queue cleared."},
+  "pixel": {"start": 6757, "submit": 1823, "complete": 2099, "l3": 1898, "note": "Four INDEPENDENT counters, not one funnel population. Last 2 days, blended across worldfirst.com global + China site + customer portal + Zyla, and ~55% of these events are fired server-side by the WF backend (so China is partially included via that feed; the browser half is China-blind). NOT v2-attributed, completes lag approval by days (which is why completes can exceed submits). Plumbing pulse only. Campaign performance = the attributed scorecard above. China vs rest-of-world = WF backend BI, never this pixel."},
   "kill_note": "Jul 6 flip: all 3 markets rebuilt onto Registration-submit optimization (old CompleteReg cells paused, history kept in region totals; cells tables below = the live RegSubmit cells only, running since Jul 6). ID lifetime spend cap US$1,500 nearly reached (US$1,136 spent), ID self-stops on cap unless raised."
 }

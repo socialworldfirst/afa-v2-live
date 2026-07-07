@@ -117,7 +117,7 @@ CONTENT = f"""<style>
 
   {attrib_html}
 
-  <h4>Registration funnel &mdash; pixel pulse</h4>
+  <h4>Registration events &mdash; pixel pulse (four independent counters, not a funnel)</h4>
   <div class="funnel">{funnel}</div>
   <div class="note" style="margin-top:8px">{px['note']}</div>
 
